@@ -4,10 +4,12 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Meteors } from "./Meteors";
 
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
+      <Meteors number={30} />
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -24,9 +26,9 @@ const HeroSection = () => {
               sequence={[
                 "Bhumi Zalte",
                 1000,
-                "AI / Machine Learning",
+                "AI/ML Enthusiast",
                 1000,
-                "Web Development",
+                "Web Developer",
                 1000,
                 "Mastering DSA",
                 1000,
