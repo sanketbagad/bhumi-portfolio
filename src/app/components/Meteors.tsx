@@ -1,6 +1,8 @@
+"use client"
+
 import { cn } from "../../../utlls/cn"
 import clsx from "clsx";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export const Meteors = ({
   number,
@@ -10,8 +12,9 @@ export const Meteors = ({
   className?: string;
 }) => {
   const meteors = new Array(number || 20).fill(true);
+
   return (
-    <div>
+    <div className="">
       {meteors.map((el, idx) => (
         <span
           key={"meteor" + idx}
@@ -23,6 +26,7 @@ export const Meteors = ({
           style={{
             top: 0,
             left: Math.floor(Math.random() * (400 - -400) + -400) + "px",
+            // left: Math.floor(Math.random() * parentWidth) + "px",
             animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + "s",
             animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + "s",
           }}
